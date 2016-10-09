@@ -7,4 +7,5 @@
     <color name="colorAttractions">#EF5350</color>
     <color name="colorRestaurant">#CE93D8</color>
     <color name="colorEvents">#FFCC80</color>
+    <color name="tan_background">#FFF7DA</color>
 </resources>

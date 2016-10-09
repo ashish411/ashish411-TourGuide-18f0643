@@ -11,45 +11,36 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class FragmentAdapter extends FragmentPagerAdapter {
     private Context mContext;
 
-    public FragmentAdapter(Context context,FragmentManager fm) {
+    public FragmentAdapter(Context context, FragmentManager fm) {
         super(fm);
-        mContext=context;
+        mContext = context;
     }
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0)
-        {
+        if (position == 0) {
             return new CompaniesFragment();
-        }
-        else if (position == 1)
-        {
+        } else if (position == 1) {
             return new RestaurantsFragment();
-        }else if (position == 2)
-        {
+        } else if (position == 2) {
             return new AttractionsFragment();
-        }
-        else {
+        } else {
             return new EventsHappeningFragment();
         }
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        if (position == 0)
-        {
+        if (position == 0) {
             return mContext.getString(R.string.category_company);
-        }
-        else if (position == 1)
-        {
+        } else if (position == 1) {
             return mContext.getString(R.string.category_restaurant);
-        }else if (position == 2)
-        {
+        } else if (position == 2) {
             return mContext.getString(R.string.category_attraction);
-                    }
-        else {
+        } else {
             return mContext.getString(R.string.category_events);
-        }}
+        }
+    }
 
     @Override
     public int getCount() {

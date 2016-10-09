@@ -2,44 +2,47 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFF7DA"
-    >
+    android:background="@color/tan_background">
 
     <ImageView
+        android:id="@+id/img_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="150dp"
-        android:minWidth="150dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:id="@+id/img_logo"/>
+        android:minHeight="150dp"
+        android:minWidth="150dp" />
+
     <LinearLayout
+        android:id="@+id/textContainer"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="vertical"
-        android:id="@+id/textContainer"
-        android:layout_toRightOf="@id/img_logo">
+        android:layout_toRightOf="@id/img_logo"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
             android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/heading"
+            android:textAlignment="center"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="@string/heading"/>
+            android:textStyle="bold" />
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/date"
-            android:layout_marginLeft="16sp"
-            android:textSize="18sp"
-            android:text="@string/date_text"/>
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/address"
             android:layout_marginLeft="16sp"
-            android:textSize="18sp"
-            android:id="@+id/address"/>
+            android:text="@string/date_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:text="@string/address"
+            android:textSize="18sp" />
     </LinearLayout>
 </RelativeLayout>

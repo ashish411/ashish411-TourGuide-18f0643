@@ -16,16 +16,17 @@ import java.util.ArrayList;
  */
 public class infoAdapter extends ArrayAdapter<infoClass> {
     private int mcolorResource;
-    public infoAdapter(Activity context, ArrayList<infoClass> resource,int colorRsrcId) {
-        super(context,0,resource);
-        mcolorResource=colorRsrcId;
+
+    public infoAdapter(Activity context, ArrayList<infoClass> resource, int colorRsrcId) {
+        super(context, 0, resource);
+        mcolorResource = colorRsrcId;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listView = convertView;
-        if (listView == null){
-            listView=LayoutInflater.from(getContext()).inflate(R.layout.custom_layout_screen,parent,false);
+        if (listView == null) {
+            listView = LayoutInflater.from(getContext()).inflate(R.layout.custom_layout_screen, parent, false);
         }
         final infoClass currentInfoClass = getItem(position);
         ImageView logoImage = (ImageView) listView.findViewById(R.id.img_logo);
@@ -35,15 +36,13 @@ public class infoAdapter extends ArrayAdapter<infoClass> {
         TextView addresText = (TextView) listView.findViewById(R.id.address);
         addresText.setText(currentInfoClass.getmAddress());
         TextView dateText = (TextView) listView.findViewById(R.id.date);
-        if (dateText.toString().isEmpty())
-        {
+        if (dateText.toString().isEmpty()) {
             dateText.setVisibility(View.INVISIBLE);
-        }
-        else {
+        } else {
             dateText.setText(currentInfoClass.getmDate());
         }
         View textContainer = listView.findViewById(R.id.textContainer);
-        int color = ContextCompat.getColor(getContext(),mcolorResource);
+        int color = ContextCompat.getColor(getContext(), mcolorResource);
         textContainer.setBackgroundColor(color);
         return listView;
     }

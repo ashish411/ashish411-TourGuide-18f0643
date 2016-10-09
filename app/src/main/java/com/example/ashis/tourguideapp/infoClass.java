@@ -4,7 +4,7 @@ package com.example.ashis.tourguideapp;
  * Created by ashis on 10/7/2016.
  */
 public class infoClass {
-    private  int mImageResource;
+    private int mImageResource;
     private String mheading;
     private String mAddress;
     private String mDate;

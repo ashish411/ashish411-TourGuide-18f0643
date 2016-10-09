@@ -24,33 +24,27 @@ public class AttractionsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.list_view,container,false);
+        View rootView = inflater.inflate(R.layout.list_view, container, false);
         final ArrayList<infoClass> infoAttraction = new ArrayList<infoClass>();
-        infoAttraction.add(new infoClass(R.drawable.attraction_ambience_mall,"Ambience Mall Gurgaon",
-                "Ambience Mall NH- 8,, Ambience Island, DLF Phase 3, Sector 24, Gurgaon," +
-                        " Haryana 122002, INDIA"));
-       infoAttraction.add(new infoClass(R.drawable.attraction_cyber_hub,"DLF Cyber Hub",
-                "DLF Cyber City, Phase 3, NH 8, Gurgaon, Haryana 122002 , IDNIA"));
-        infoAttraction.add(new infoClass(R.drawable.attraction_damdama_lake,"The Gateway Resort Damdama" +
-                " Lake Gurgaon","Off Sohna-Gurgaon Road"));
-        infoAttraction.add(new infoClass(R.drawable.attraction_fun_n_food,"Fun N Food Village",
-                "Old Delhi, Gurgaon Road, Kapshera, New Delhi, Delhi 110097, INDIA"));
-        infoAttraction.add(new infoClass(R.drawable.attraction_kingdon_of_dreams,"Kingdom Of Dreams","Auditorium" +
-                " Complex, Near IFFCO Metro Station, Sector 29, Gurgaon, Haryana 122001, INDIA"));
-        infoAttraction.add(new infoClass(R.drawable.attraction_leisure_valley,"Leisure Valley","287," +
-                " NH 8, Sector 29, Gurgaon, Haryana 122021, INDIA"));
-        infoAttraction.add(new infoClass(R.drawable.attraction_mgf,"MGF MALL","A1/59, AIT Chowk," +
-                " Sushant Lok Phase I, Sector 55, Gurgaon, Haryana, INDIA"));
-        infoAttraction.add(new infoClass(R.drawable.attraction_oyster_beach,"Oyester Beach Water Park"
-                ," Sector 29, Huda City Metro Station, Gurgaon, Haryana 122009, INDIA"));
-        infoAttraction.add(new infoClass(R.drawable.attraction_sai_ka_aangan,"Sai Ka Aangan","E-Block," +
-                " Sushant Lok, Phase-I, Opp. Paras Hospital, Gurgaon, Haryana 122003, INDIA"));
-        infoAttraction.add(new infoClass(R.drawable.attraction_sheetla_mata_mandir,"Sheetla Mata " +
-                "Mandir","Sheetla Mata Road, Sector 6, Gurgaon, Haryana 122001, INDIA"));
-       infoAdapter adapter = new infoAdapter(getActivity(),infoAttraction,R.color.colorAttractions);
+        infoAttraction.add(new infoClass(R.drawable.attraction_ambience_mall,
+                getString(R.string.attraction_name_ambience), getString(R.string.attraction_address_ambience)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_cyber_hub,
+                getString(R.string.attraction_name_cyber_hub), getString(R.string.attraction_address_cyber_hub)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_damdama_lake, getString(R.string.attraction_name_damdama),
+                getString(R.string.attraction_address_damdama)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_fun_n_food, getString(R.string.attraction_name_fun_n_food),
+                getString(R.string.attraction_address_funnfood)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_kingdon_of_dreams, getString(R.string.attraction_name_kod), getString(R.string.attraction_address_kod)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_leisure_valley, getString(R.string.attraction_name_leisure), getString(R.string.attraction_address_leisure)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_mgf, getString(R.string.attraction_name_mgf), getString(R.string.attraction_address_mgf)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_oyster_beach, getString(R.string.attraction_name_oyster)
+                , getString(R.string.attraction_address_oyster)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_sai_ka_aangan,
+                getString(R.string.attraction_name_sai), getString(R.string.attraction_address_sai)));
+        infoAttraction.add(new infoClass(R.drawable.attraction_sheetla_mata_mandir, getString(R.string.attraction_name_sheetla), getString(R.string.attraction_address_sheetla)));
+        infoAdapter adapter = new infoAdapter(getActivity(), infoAttraction, R.color.colorAttractions);
         ListView listView = (ListView) rootView.findViewById(R.id.listView);
         listView.setAdapter(adapter);
-
 
 
         return rootView;

@@ -24,36 +24,28 @@ public class EventsHappeningFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.list_view,container,false);
+        View rootView = inflater.inflate(R.layout.list_view, container, false);
         final ArrayList<infoClass> infoEvents = new ArrayList<infoClass>();
-        infoEvents.add(new infoClass(R.drawable.event_arijit_singh,"Rhythm Redefined - A Musical" +
-                " Tour with *Arijit Singh*","Leisure valley HUDA Ground, Gurgaon, India",
-                "Oct 22 2016 at 06:00 pm to Sat Oct 22 2016 at 10:00 pm "));
-        infoEvents.add(new infoClass(R.drawable.event_buddy_daddy_family_bash,"Buddy Daddy Family Bash",
-                "Oysters Water Park Appu Ghar Gurgaon, Sector 29, Gurgaon, India","Fri Nov 11 2016"));
-        infoEvents.add(new infoClass(R.drawable.event_diwali_mela,"GRAND DIWALI MELA",
-                "RWA Regency Park 1,Gurgaon, India","Oct 21 2016 04:00 pm "));
-        infoEvents.add(new infoClass(R.drawable.event_dj_yudi,"Commercial Night with DJ Yudi","" +
-                " Sense Of Spirits, 11,12 Leisure Valley Road,Gurgaon, India",
-                "Oct 15 2016 20:00 hr"));
-        infoEvents.add(new infoClass(R.drawable.event_dushera_flea_market,"Dussehra Flea Market",
-                " HUDA CITY metro station"," Oct 11 2016 16:00"));
-        infoEvents.add(new infoClass(R.drawable.event_inner_voice,"A Silence, A Scream: Explore The" +
-                " World Of Inner Voice","DLF Phase 5,Gurgaon","Oct 16 2016 15:00 hr"));
-        infoEvents.add(new infoClass(R.drawable.event_marathon,"Millennium City Marathon 2nd Edition," +
-                " Gurgaon","Gurgaon, India","Oct 23 2016 04:30 hr"));
-        infoEvents.add(new infoClass(R.drawable.event_mentor_hours_pushpendra_thakur,"Mentor Hours with Pushpendra Thakur"
-                ,"91springboard, Plot 23, Maruti Industrial Area, Sector 18, Gurgaon, India",
-                "Oct 22 2016 10:30 hr"));
-        infoEvents.add(new infoClass(R.drawable.event_property_expo,"Biggest Property Expo-2016",
-                "Epicentre,Gurgaon, India","Sat Oct 08 2016 at 11:00 am"));
-        infoEvents.add(new infoClass(R.drawable.event_unleashes,"Unleashed","Leisure valley HUDA Ground," +
-                " Gurgaon, Gurgaon, Haryana"," Sat Nov 05 2016 at 06:00 pm"));
-        infoAdapter adapter = new infoAdapter(getActivity(),infoEvents,R.color.colorEvents);
+        infoEvents.add(new infoClass(R.drawable.event_arijit_singh, getString(R.string.events_name_arijitsingh), getString(R.string.events_address_arijitsingh), getString(R.string.events_date_arijitsingh)));
+        infoEvents.add(new infoClass(R.drawable.event_buddy_daddy_family_bash, getString(R.string.events_name_buddyDaddy),
+                getString(R.string.events_name_buddyDaddy), getString(R.string.events_date_buddyDaddy)));
+        infoEvents.add(new infoClass(R.drawable.event_diwali_mela, getString(R.string.events_name_diwaliMela),
+                getString(R.string.events_address_diwaliMela), getString(R.string.events_date_diwaliMela)));
+        infoEvents.add(new infoClass(R.drawable.event_dj_yudi, getString(R.string.events_name_djYudi), getString(R.string.events_name_djYudi),
+                getString(R.string.events_date_djYudi)));
+        infoEvents.add(new infoClass(R.drawable.event_dushera_flea_market, getString(R.string.events_name_dusheraflea),
+                getString(R.string.events_address_dusheraflea), getString(R.string.events_date_dusheraflea)));
+        infoEvents.add(new infoClass(R.drawable.event_inner_voice, getString(R.string.events_name_innerVoice), getString(R.string.events_address_innerVoice), getString(R.string.events_date_innerVoice)));
+        infoEvents.add(new infoClass(R.drawable.event_marathon, getString(R.string.events_name_marathon), getString(R.string.events_address_marathon), getString(R.string.events_date_marathon)));
+        infoEvents.add(new infoClass(R.drawable.event_mentor_hours_pushpendra_thakur, getString(R.string.events_name_mentorHour)
+                , getString(R.string.events_address_innerVoice),
+                getString(R.string.events_date_innerVoice)));
+        infoEvents.add(new infoClass(R.drawable.event_property_expo, getString(R.string.events_name_propertyExpo),
+                getString(R.string.events_address_propertyExpo), getString(R.string.events_date_propertyExpo)));
+        infoEvents.add(new infoClass(R.drawable.event_unleashes, getString(R.string.events_name_unleaashed), getString(R.string.events_address_unleaashed), getString(R.string.events_date_unleaashed)));
+        infoAdapter adapter = new infoAdapter(getActivity(), infoEvents, R.color.colorEvents);
         ListView listView = (ListView) rootView.findViewById(R.id.listView);
         listView.setAdapter(adapter);
-
-
 
 
         return rootView;
